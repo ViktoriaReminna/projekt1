@@ -28,7 +28,7 @@
     height: 400px;
 
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url(../images/cofee-tablet-1X.jpg);
+      url(../images/how-its-made/cofee-tablet-1x.jpg);
     border-radius: 15px;
   }
   .work-list {
@@ -70,7 +70,7 @@
     width: 614px;
     height: 400px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url(../images/cofee-tablet-1X.jpg);
+      url(../images/how-its-made/cofee-tablet-1x.jpg);
     border-radius: 15px;
     background-repeat: no-repeat;
     display: flex;
@@ -85,7 +85,7 @@
     width: 614px;
     height: 400px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url(../images/cofee-tablet-2X.jpg);
+      url(../images/how-its-made/cofee-tablet-2x.jpg);
     border-radius: 15px;
     background-repeat: no-repeat;
   }
