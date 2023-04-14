@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vanilla-app-template/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla App Template</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    
+    <script type="module" crossorigin src="/vanilla-app-template/assets/index-bcdd80d5.js"></script>
+    <link rel="stylesheet" href="/vanilla-app-template/assets/index-db11bde2.css">
+  </head>
+  <body>
+    <header class="header">
+  <div class="container header-container">
+    <nav class="nav">
+      <a href="./index.html" class="header-logo-link"
+        ><div class="header-logo"><span>SIMPLY </span>CHOCOLATE</div>
+        <svg class="header-logo-icon" width="21" height="21">
+          <use href="/vanilla-app-template/assets/symbol-defs-ab14a2f3.svg#icon-logo"></use>
+        </svg>
+      </a>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="#" class="nav-link">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#how-its-work" class="nav-link">How it's made?</a>
+        </li>
+        <li class="nav-item">
+          <a href="#our_products" class="nav-link">Our products</a>
+        </li>
+        <li class="nav-item">
+          <a href="#top_sellers" class="nav-link">Top sellers</a>
+        </li>
+        <li class="nav-item">
+          <a href="#review" class="nav-link">Chocolate is loved</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header-social">
+      <ul class="header-social-list">
+        <li class="header-social-item">
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            ><svg class="header-social-icon" width="24" height="24">
+              <use href="/vanilla-app-template/assets/symbol-defs-ab14a2f3.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="header-social-item">
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            ><svg class="header-social-icon" width="24" height="24">
+              <use href="/vanilla-app-template/assets/symbol-defs-ab14a2f3.svg#icon-twitter"></use></svg
+          ></a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- --------Mobile menu----------- -->
+    <button type="button" class="mobile-menu-open js-open-menu">
+      <svg class="menu-open-icon" width="21" height="14">
+        <use href="/vanilla-app-template/assets/symbol-defs-ab14a2f3.svg#icon-burger"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="mobile-menu js-menu-container">
+    <div class="mobile-menu-container">
+      <button class="mobile-menu-close-btn js-close-menu">
+        <svg class="mobile-menu-close-icon" width="12" height="12">
+          <use href="/vanilla-app-template/assets/symbol-defs-ab14a2f3.svg#menu-icon-close"></use>
+        </svg>
+      </button>
+      <ul class="mobile-menu-list">
+        <li class="mobile-menu-item">
+          <a href="#" class="mobile-menu-link current link">Home</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a href="#how-its-work" class="mobile-menu-link link"
+            >How it's made?</a
+          >
+        </li>
+        <li class="mobile-menu-item">
+          <a href="#our_products" class="mobile-menu-link link">Our products</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a href="#top_sellers" class="mobile-menu-link link">Top sellers</a>
+        </li>
+        <li class="mobilemenu-item">
+          <a href="#review" class="mobile-menu-link link">Chocolate is loved</a>
+        </li>
+      </ul>
+      <div class="mobile-menu-social">
+        <ul class="mobile-menu-social-list">
+          <li class="mobile-menu-social-item">
+            <a
+              href="https://www.instagram.com"
+              class="mobile-social-link"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              ><svg class="mobile-menu-social-icon" width="22" height="22">
+                <use href="/vanilla-app-template/assets/symbol-defs-ab14a2f3.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-menu-social-item">
+            <a
+              href="https://twitter.com"
+              class="mobile-social-link"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              ><svg class="mobile-menu-social-icon" width="20" height="20">
+                <use href="/vanilla-app-template/assets/symbol-defs-ab14a2f3.svg#icon-twitter"></use></svg
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <main>
+      <section class="hero">
+  <div class="container hero-container">
+    <h2 class="hero-title">
+      Treat yourself or a loved one to our finest ingredients for a moment of
+      pure delight!
+    </h2>
+
+    <div class="hero-content">
+      <div class="buttons-hero">
+
+        <button class="button-hero-main data-modal-open" type="button" buy-modal-open>
+          Buy Now
+        </button>
+
+        
+        <a href="#how-its-work">
+          <button class="button-hero-sec" type="button">How it’s made</button>
+        </a>
+      </div>
+
+            <a href="#footerу">
+              <button class="hero-nav-btn" type="button">
+                <span>scroll down</span>
+                <div class="hero-button-icon">
+                  <svg class="hero-icon">
+                    <use class="hero-icon-item" href="/vanilla-app-template/assets/symbol-defs-ab14a2f3.svg#icon-arrow"></use>
+                  </svg>
+                </div>
+              </button>
+            </a>
+
+      </div>
+    
+    </div>
+  </div>
+</section>
+
+      <section class="advantages">
+  <div class="container advantages-container">
+    <h2 class="visually-hidden">advantages</h2>
+    <ul class="advantages-list list">
+      <li class="advantages-item after">
+        <div class="advantages-icon">
+          <svg class="part-card-icon" width="32px" height="32px">
+            <use href="/vanilla-app-template/assets/symbol-defs-ab14a2f3.svg#icon-group"></use>
+          </svg>
+        </div>
+        <h3 class="advantages-subtitle">Unsurpassed taste</h3>
+        <p class="advantages-text">
+          Crafted with the finest quality cocoa beans and a dedication to
+          perfection, each bite is a decadent experience that simply cannot be
+          matched. Savor the richness and complexity of our Unsurpassed Taste
+          and discover a new level of chocolate bliss.
+        </p>
+      </li>
+      <li class="advantages-item after">
+        <div class="advantages-icon">
+          <svg class="part-card-icon" width="32px" height="32px">
+            <use href="/vanilla-app-template/assets/symbol-defs-ab14a2f3.svg#icon-coin"></use>
+          </svg>
+        </div>
+        <h3 class="advantages-subtitle">Affordable price</h3>
+        <p class="advantages-text">
+          Indulge in high-quality chocolate without breaking the bank with
+          Simply Chocolate's selection of affordable treats. Enjoy
+          mouth-watering truffles and velvety chocolate bars without sacrificing
+          taste or quality. Browse our selection and indulge in affordable
+          luxury today.
+        </p>
+      </li>
+      <li class="advantages-item">
+        <div class="advantages-icon">
+          <svg class="part-card-icon" width="32px" height="32px">
+            <use href="/vanilla-app-template/assets/symbol-defs-ab14a2f3.svg#icon-spoon"></use>
+          </svg>
+        </div>
+        <h3 class="advantages-subtitle">Own production</h3>
+        <p class="advantages-text">
+          We take pride in our own production process, ensuring that every step
+          is carefully crafted to perfection. From selecting the finest
+          ingredients to handcrafting each piece, our attention to detail is
+          evident in every bite.
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="unique">
+  <div class="container unique-container">
+    <h2 class="unique-title">
+      IT ALL ADDS UP TO ONE EXCEPTIONAL
+      <span class="unique-caption">TASTE</span> SENSATION
+    </h2>
+    <p class="unique-text">
+      At Simply Chocolate, we believe that the secret to exceptional chocolate
+      is in the details. From the sourcing of the finest ingredients to the
+      careful crafting of each individual piece, every step of our process adds
+      up to one exceptional taste sensation.
+    </p>
+    <ul class="unique-list">
+      <li class="unique-item">
+        <a href="" class="unique-link link">
+          <div class="unique-holder">
+            <div class="unique-box-choco">
+              <picture>
+                <source
+                  srcset="/vanilla-app-template/assets/chocolate-desktop-1x-e16ea73e.png 1x, /vanilla-app-template/assets/chocolate-desktop-2x-10b876ac.png 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="/vanilla-app-template/assets/chocolate-1x-3b6303d9.png 1x, /vanilla-app-template/assets/chocolate-2x-2cc8ea18.png 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="/vanilla-app-template/assets/chocolate-1x-3b6303d9.png 1x, /vanilla-app-template/assets/chocolate-2x-2cc8ea18.png 2x"
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  src="/vanilla-app-template/assets/chocolate-1x-3b6303d9.png"
+                  alt=""
+                  class="unique-img"
+                  width="224"
+                  height="171"
+                />
+              </picture>
+
+              <p class="unique-lead">MILK CHOCOLATE</p>
+            </div>
+            <div class="unique-block">
+              <p class="unique-subject">MILK CHOCOLATE</p>
+              <div class="button-box">
+                <button class="unique-btn" type="button">chocolate</button>
+                <button class="unique-button" type="button">
+                  the benefits
+                </button>
+              </div>
+              <p class="unique-desc">
+                Milk chocolate is a solid chocolate confectionery containing
+                cocoa, sugar and milk. It is the most consumed type of
+                chocolate. Chocolate was originally sold and consumed as a
+                beverage in pre-Columbian times. Although four-fifths of all
+                milk chocolate is sold in the United States and Europe.
+              </p>
+            </div>
+          </div></a
+        >
+      </li>
+      <li class="unique-item">
+        <a href="" class="unique-link link">
+          <div class="unique-overlay milk">
+            <div class="unique-box-milk">
+              <picture>
+                <source
+                  srcset="/vanilla-app-template/assets/milk-desktop-1x-7f95c264.png 1x, /vanilla-app-template/assets/milk-desktop-2x-34f80c30.png 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="/vanilla-app-template/assets/milk-1x-80ed62c0.png 1x, /vanilla-app-template/assets/milk-2x-36ae15b8.png 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="/vanilla-app-template/assets/milk-1x-80ed62c0.png 1x, /vanilla-app-template/assets/milk-2x-36ae15b8.png 2x"
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  src="/vanilla-app-template/assets/milk-1x-80ed62c0.png"
+                  alt=""
+                  class="unique-img"
+                  width="224"
+                  height="171"
+                />
+              </picture>
+
+              <p class="unique-lead cap">Milk</p>
+            </div>
+            <div class="unique-block">
+              <p class="unique-subject">Milk</p>
+              <div class="button-box">
+                <button class="unique-btn" type="button">Milk</button>
+                <button class="unique-button" type="button">
+                  the benefits
+                </button>
+              </div>
+              <p class="unique-desc">
+                Milk is a white liquid food produced by the mammary glands of
+                mammals. It is the primary source of nutrition for young mammals
+                (including breastfed human infants) before they are able to
+                digest solid food.Early-lactation milk, which is called
+                colostrum, contains antibodies that strengthen the immune
+                system.
+              </p>
+            </div>
+          </div>
+        </a>
+      </li>
+      <li class="unique-item">
+        <a href="" class="unique-link link">
+          <div class="unique-overlay nuts">
+            <div class="unique-box-nuts">
+              <picture>
+                <source
+                  srcset="/vanilla-app-template/assets/nuts-desktop-1x-cb79a089.png 1x, /vanilla-app-template/assets/nuts-desktop-2x-68384dea.png 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="/vanilla-app-template/assets/nuts-1x-b3552e57.png 1x, /vanilla-app-template/assets/nuts-2x-649fc4e2.png 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="/vanilla-app-template/assets/nuts-1x-b3552e57.png 1x, /vanilla-app-template/assets/nuts-2x-649fc4e2.png 2x"
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  src="/vanilla-app-template/assets/nuts-1x-b3552e57.png"
+                  alt=""
+                  class="unique-img"
+                  width="224"
+                  height="171"
+                />
+              </picture>
+
+              <p class="unique-lead">NUTS</p>
+            </div>
+            <div class="unique-block">
+              <p class="unique-subject">NUTS</p>
+              <div class="button-box">
+                <button class="unique-btn" type="button">nuts</button>
+                <button class="unique-button" type="button">
+                  the benefits
+                </button>
+              </div>
+              <p class="unique-desc">
+                Almonds, pistachios, and walnuts are some types of nuts that
+                contain healthy nutrients. When eaten as part of a
+                nutrient-dense diet, these 9 nuts may offer benefits such as
+                reducing your risk of heart disease. They’re a good source of
+                fiber, healthy fats, and plant protein. Plus, they’re great on
+                their own.
+              </p>
+            </div>
+          </div></a
+        >
+      </li>
+      <li class="unique-item">
+        <a href="" class="unique-link link">
+          <div class="unique-overlay coffe">
+            <div class="unique-box-milkchoco">
+              <picture>
+                <source
+                  srcset="/vanilla-app-template/assets/coffe-desktop-1x-8d3a623b.png 1x, /vanilla-app-template/assets/coffe-desktop-1x-8d3a623b.png 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="/vanilla-app-template/assets/coffe-1x-01f2b2f3.png 1x, /vanilla-app-template/assets/coffe-2x-639adfdf.png 2x"
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="/vanilla-app-template/assets/coffe-1x-01f2b2f3.png 1x, /vanilla-app-template/assets/coffe-2x-639adfdf.png 2x"
+                  media="(max-width: 767px)"
+                />
+
+                <img
+                  src="/vanilla-app-template/assets/coffe-1x-01f2b2f3.png"
+                  alt=""
+                  class="unique-img"
+                  width="224"
+                  height="171"
+                />
+              </picture>
+
+              <p class="unique-lead cap">SEMI - SWEET CHOCOLATE</p>
+            </div>
+            <div class="unique-block">
+              <p class="unique-subject">semi - sweet chocolate</p>
+              <div class="button-box">
+                <button class="unique-btn" type="button">
+                  sweet chocolate
+                </button>
+                <button class="unique-button" type="button">
+                  the benefits
+                </button>
+              </div>
+              <p class="unique-desc">
+                Semi-sweet chocolate has a cocoa solid content of 35 to 65%. One
+                of the best ways to gain an understanding of this type of
+                chocolate is to compare it to a different type of chocolate.
+                Semisweet is darker than milk chocolate. In a taste comparison,
+                it has a slightly bitter taste whereas milk chocolate is
+                sweeter.
+              </p>
+            </div>
+          </div></a
+        >
+      </li>
+    </ul>
+  </div>
+</section>
+
+      <section class="work" id="how-its-work">
+  <div class="container">
+    <div class="work-text">
+      <h2 class="work-title">
+        <a href="./Timework.html" class="work-logo-primary-link">
+          <span class="work-logo-style">HOW IT’S </span>MADE?</a
+        >
+      </h2>
+    </div>
+    <div class="work-list">
+      <div class="work-photo list-markers work-blocks work-section-block">
+        <img
+          class="work-photo-coffe"
+          srcset="/vanilla-app-template/assets/cofee-1x-28187ad0.jpg 1x, /vanilla-app-template/assets/cofee-2x-2f981864.jpg 2x"
+          src="images/cofee-1X.jpg"
+          alt=""
+          width="335"
+        />
+        <a href="" class="work-icon-play">
+          <svg class="work-icon" width="14" height="15">
+            <use
+              class="vector"
+              href="/vanilla-app-template/assets/symbol-defs-ab14a2f3.svg#icon-Vector-1"
+            ></use>
+          </svg>
+        </a>
+      </div>
+      <div class="work-section">
+        <h3 class="work-list-text">
+          Try our chocolates today and discover the perfect balance of flavor
+        </h3>
+        <ul class="work-section-text list-markers">
+          <li class="work-markers">
+            <p class="work-list-item">
+              Heat the milk in a saucepan without bringing it to a boil. Add
+              sugar and cocoa powder.
+            </p>
+          </li>
+          <li class="work-markers">
+            <p class="work-list-item">
+              At the same time, prepare a water bath. Melt the butter on it.
+            </p>
+          </li>
+          <li class="work-markers">
+            <p class="work-list-item">
+              "Mix" the milk mixture and already liquid butter. Mix thoroughly
+              with a silicone spatula so that the mass becomes uniform and
+              silky.
+            </p>
+          </li>
+          <li class="work-markers">
+            <p class="work-list-item">
+              Heat the mixture over low heat, letting it barely boil.
+            </p>
+          </li>
+          <li class="work-markers">
+            <p class="work-list-item">
+              Pour the chocolate into special containers (can be replaced with
+              ice molds). Allow to cool and harden.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+    </main>
+    
+  </body>
+</html>
