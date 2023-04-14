@@ -151,7 +151,7 @@
     width: 335px;
     height: 500px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url(../images/cofee-1X.jpg);
+      url(../images/how-its-made/cofee-1x.jpg);
     border-radius: 15px;
     background-repeat: no-repeat;
     display: flex;
@@ -166,7 +166,7 @@
     width: 335px;
     height: 500px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url(../images/cofee-2X.jpg);
+      url(../images/how-its-made/cofee-2x.jpg);
     border-radius: 15px;
     background-repeat: no-repeat;
   }

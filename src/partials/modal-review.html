@@ -1,0 +1,49 @@
+<div class="modal-reviews-bd is-hidden" data-modal>
+  <div class="modal-reviews-conteiner">
+    <button type="button" class="modal-reviews-close" modal-close>
+      <svg width="12" height="12" class="modal-reviews-close-svg">
+        <use href="./images/symbol-defs.svg#menu-icon-close"></use>
+      </svg>
+    </button>
+    <h2 class="modal-reviews-title">
+      leave a review about <span>our chocolate</span>
+    </h2>
+    <form class="modal-reviews-form">
+      <div class="modal-reviews-flex">
+        <input
+          class="modal-reviews-input"
+          type="text"
+          name="username"
+          placeholder="Name"
+        />
+
+        <input
+          class="modal-reviews-input"
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+        />
+
+        <input
+          class="modal-reviews-input"
+          type="tel"
+          name="tel"
+          id="tel"
+          placeholder="Phone number"
+        />
+        <label for="tel" class="modal-reviews-tel">+380</label>
+        <svg width="24" height="18" class="modal-reviews-tel-svg">
+          <use href="./images/symbol-defs.svg#ukr"></use>
+        </svg>
+
+        <textarea
+          class="modal-reviews-text"
+          name="coment"
+          placeholder="Enter text"
+        ></textarea>
+      </div>
+
+      <button type="submit" class="modal-reviews-sub btn">Send</button>
+    </form>
+  </div>
+</div>
