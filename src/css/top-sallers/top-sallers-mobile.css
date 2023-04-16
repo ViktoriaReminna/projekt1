@@ -83,18 +83,22 @@
     width: 120px;
     height: 41px;
   }
-  .section-list-img-desktop,
+  /* .section-list-img-desktop,
   .section-list-img-tablet {
     display: none;
-  }
-  .section-list-img-mobile {
+  } */
+  /* .section-list-img-mobile {
     justify-content: center;
     align-content: center;
-  }
+  } */
   .top-sellers-title {
     margin-bottom: 32px;
   }
   #text {
     margin-bottom: 20px;
   }
+    .photo-img1,
+    .photo-img2,
+    .photo-img3 {
+      width: 335px;}
 }
