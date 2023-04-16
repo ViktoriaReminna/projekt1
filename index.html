@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vanilla-app-template/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,18 +15,241 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
     
-    <script type="module" crossorigin src="/vanilla-app-template/assets/index-bcdd80d5.js"></script>
-    <link rel="stylesheet" href="/vanilla-app-template/assets/index-db11bde2.css">
+    <script type="module" crossorigin src="/comand-project/assets/index-d52de613.js"></script>
+    <link rel="stylesheet" href="/comand-project/assets/index-1183c1da.css">
   </head>
   <body>
+    <!-- Modal -->
+<div class="backdrop is-hidden" buy-data-modal>
+  <div class="modal">
+    <button type="button" class="modal-close" buy-modal-close>
+      <svg class="icon-close" width="20" height="20">
+        <use href="/comand-project/assets/symbol-defs-9c724f1e.svg#menu-icon-close"></use>
+      </svg>
+    </button>
+    <p class="modal-title"><span class="title-buy">buy</span> now</p>
+    <div class="container buye-option-container">
+      <ul class="buy-option-list">
+        <li class="card buy-option-item">
+          <img
+            class="buy-option-img"
+            src="../images/modal-img/dark-chocolate.jpg"
+            alt="Dark Chocolate"
+            width="120"
+          />
+          <button type="button" class="buy-option-button">100g</button>
+        </li>
+        <li class="card buy-option-item">
+          <img
+            class="buy-option-img"
+            src="../images/modal-img/white-chocolate.jpg"
+            alt="White Chocolate"
+            width="120"
+          />
+          <button type="button" class="buy-option-button">200g</button>
+        </li>
+        <li class="card buy-option-item">
+          <img
+            class="buy-option-img"
+            src="../images/modal-img/milk-chocolate.jpg"
+            alt="Milk Chocolate"
+            width="120"
+          />
+          <button type="button" class="buy-option-button">300g</button>
+        </li>
+      </ul>
+    </div>
+    <form>
+      <div class="form-group">
+        <label class="form-label personal-information">
+          <span class="label-personal-information label"
+            >Personal information</span
+          >
+          <div class="shape-personal-information">
+            <span class="form-field">
+              <input
+                type="text"
+                name="name"
+                class="form-input form-per-info"
+                placeholder="Name"
+                required
+              />
+            </span>
+            <span class="form-field">
+              <input
+                type="text"
+                name="surname"
+                class="form-input form-per-info"
+                placeholder="Surname"
+                required
+              />
+            </span>
+          </div>
+        </label>
+      </div>
+      <div class="form-group">
+        <label class="form-label">
+          <div class="shape-email">
+            <span class="label-email label">Email</span>
+            <span class="form-field">
+              <input
+                type="email"
+                name="email"
+                class="form-input form-per-email"
+                placeholder="Enter your email"
+                required
+              />
+            </span>
+          </div>
+        </label>
+      </div>
+      <div class="form-group">
+        <label class="form-label">
+          <span class="label-phone-number label">Phone number</span>
+          <span class="form-field">
+            <input
+              type="number"
+              name="phone"
+              class="form-input form-per-phone"
+              placeholder="Phone number"
+              required
+            />
+          </span>
+        </label>
+      </div>
+      <div class="form-group">
+        <label class="form-label">
+          <span class="label-card-number label">Card number</span>
+          <span class="form-field">
+            <div class="card-and-logomaster">
+              <input
+                class="cc-number form-per-card form-input"
+                name="cardNumber"
+                autocomplete="off"
+                maxlength="20"
+                inputmode="numeric"
+                pattern="[0-9]*"
+                placeholder="Enter card"
+                required
+              />
+              <span class="form-icon"
+                ><svg class="card-icon" width="60" height="30">
+                  <use href="/comand-project/assets/symbol-defs-9c724f1e.svg#icon-mastercard"></use>
+                </svg>
+              </span>
+            </div>
+          </span>
+        </label>
+      </div>
+      <div class="form-group">
+        <div class="form-field">
+          <label class="form-label"
+            ><span class="label-comment label">Comment</span>
+            <textarea
+              name="comment"
+              rows="10"
+              class="text-input form-input"
+              placeholder="Enter text"
+            ></textarea>
+          </label>
+        </div>
+      </div>
+      <button type="submit" class="form-button button">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+    <div class="modal-reviews-bd is-hidden" data-modal>
+  <div class="modal-reviews-conteiner">
+    <button type="button" class="modal-reviews-close" modal-close>
+      <svg width="12" height="12" class="modal-reviews-close-svg">
+        <use href="/comand-project/assets/symbol-defs-9c724f1e.svg#menu-icon-close"></use>
+      </svg>
+    </button>
+    <h2 class="modal-reviews-title">
+      leave a review about <span>our chocolate</span>
+    </h2>
+    <form class="modal-reviews-form">
+      <div class="modal-reviews-flex">
+        <input
+          class="modal-reviews-input"
+          type="text"
+          name="username"
+          placeholder="Name"
+        />
+
+        <input
+          class="modal-reviews-input"
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+        />
+
+        <input
+          class="modal-reviews-input"
+          type="tel"
+          name="tel"
+          id="tel"
+          placeholder="Phone number"
+        />
+        <label for="tel" class="modal-reviews-tel">+380</label>
+        <svg width="24" height="18" class="modal-reviews-tel-svg">
+          <use href="/comand-project/assets/symbol-defs-9c724f1e.svg#ukr"></use>
+        </svg>
+
+        <textarea
+          class="modal-reviews-text"
+          name="coment"
+          placeholder="Enter text"
+        ></textarea>
+      </div>
+
+      <button type="submit" class="modal-reviews-sub btn">Send</button>
+    </form>
+  </div>
+</div>
+
+
+    
+  <div class="modal-explorer is-hidden" explorer-data-modal>
+    <div class="modal-explorer-container">
+    <div class="modal-explorer-section">
+      <button modal-close class="close-modal-explorer" type="button" explorer-modal-close>
+        <svg class="close-modal-explorer-icon">
+          <use href="/comand-project/assets/symbol-defs-9c724f1e.svg#menu-icon-close"></use>
+        </svg>
+      </button>
+    </div>
+    <h2 class="modal-explorer-title">Explore our <span class="modal-explorer-title-tablet"><span
+          class="modal-explorer-title-sec">new chocolate</span> first!</span>
+      <div class="modal-explorer-form">
+        <form class="modal-explorer-form-item" action="#">
+          <label class="modal-explorer-form-item" for="email">
+            <input type="email" id="email" class="modal-explorer-input" name="email" placeholder="Enter your email"
+              pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" required />
+          </label>
+        </form>
+        <button class="modal-explorer-btn btn" type="submit">Submit</button>
+        </div>
+      </div>
+
+  </div>
+
+ 
+
     <header class="header">
   <div class="container header-container">
     <nav class="nav">
       <a href="./index.html" class="header-logo-link"
         ><div class="header-logo"><span>SIMPLY </span>CHOCOLATE</div>
         <svg class="header-logo-icon" width="21" height="21">
-          <use href="/vanilla-app-template/assets/symbol-defs-ab14a2f3.svg#icon-logo"></use>
+          <use href="/comand-project/assets/symbol-defs-9c724f1e.svg#icon-logo"></use>
         </svg>
       </a>
       <ul class="nav-list">
@@ -56,7 +279,7 @@
             target="_blank"
             rel="noopener noreferrer nofollow"
             ><svg class="header-social-icon" width="24" height="24">
-              <use href="/vanilla-app-template/assets/symbol-defs-ab14a2f3.svg#icon-instagram"></use>
+              <use href="/comand-project/assets/symbol-defs-9c724f1e.svg#icon-instagram"></use>
             </svg>
           </a>
         </li>
@@ -66,7 +289,7 @@
             target="_blank"
             rel="noopener noreferrer nofollow"
             ><svg class="header-social-icon" width="24" height="24">
-              <use href="/vanilla-app-template/assets/symbol-defs-ab14a2f3.svg#icon-twitter"></use></svg
+              <use href="/comand-project/assets/symbol-defs-9c724f1e.svg#icon-twitter"></use></svg
           ></a>
         </li>
       </ul>
@@ -75,7 +298,7 @@
     <!-- --------Mobile menu----------- -->
     <button type="button" class="mobile-menu-open js-open-menu">
       <svg class="menu-open-icon" width="21" height="14">
-        <use href="/vanilla-app-template/assets/symbol-defs-ab14a2f3.svg#icon-burger"></use>
+        <use href="/comand-project/assets/symbol-defs-9c724f1e.svg#icon-burger"></use>
       </svg>
     </button>
   </div>
@@ -83,7 +306,7 @@
     <div class="mobile-menu-container">
       <button class="mobile-menu-close-btn js-close-menu">
         <svg class="mobile-menu-close-icon" width="12" height="12">
-          <use href="/vanilla-app-template/assets/symbol-defs-ab14a2f3.svg#menu-icon-close"></use>
+          <use href="/comand-project/assets/symbol-defs-9c724f1e.svg#menu-icon-close"></use>
         </svg>
       </button>
       <ul class="mobile-menu-list">
@@ -114,7 +337,7 @@
               target="_blank"
               rel="noopener noreferrer nofollow"
               ><svg class="mobile-menu-social-icon" width="22" height="22">
-                <use href="/vanilla-app-template/assets/symbol-defs-ab14a2f3.svg#icon-instagram"></use>
+                <use href="/comand-project/assets/symbol-defs-9c724f1e.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
@@ -125,7 +348,7 @@
               target="_blank"
               rel="noopener noreferrer nofollow"
               ><svg class="mobile-menu-social-icon" width="20" height="20">
-                <use href="/vanilla-app-template/assets/symbol-defs-ab14a2f3.svg#icon-twitter"></use></svg
+                <use href="/comand-project/assets/symbol-defs-9c724f1e.svg#icon-twitter"></use></svg
             ></a>
           </li>
         </ul>
@@ -160,7 +383,7 @@
                 <span>scroll down</span>
                 <div class="hero-button-icon">
                   <svg class="hero-icon">
-                    <use class="hero-icon-item" href="/vanilla-app-template/assets/symbol-defs-ab14a2f3.svg#icon-arrow"></use>
+                    <use class="hero-icon-item" href="/comand-project/assets/symbol-defs-9c724f1e.svg#icon-arrow"></use>
                   </svg>
                 </div>
               </button>
@@ -179,7 +402,7 @@
       <li class="advantages-item after">
         <div class="advantages-icon">
           <svg class="part-card-icon" width="32px" height="32px">
-            <use href="/vanilla-app-template/assets/symbol-defs-ab14a2f3.svg#icon-group"></use>
+            <use href="/comand-project/assets/symbol-defs-9c724f1e.svg#icon-group"></use>
           </svg>
         </div>
         <h3 class="advantages-subtitle">Unsurpassed taste</h3>
@@ -193,7 +416,7 @@
       <li class="advantages-item after">
         <div class="advantages-icon">
           <svg class="part-card-icon" width="32px" height="32px">
-            <use href="/vanilla-app-template/assets/symbol-defs-ab14a2f3.svg#icon-coin"></use>
+            <use href="/comand-project/assets/symbol-defs-9c724f1e.svg#icon-coin"></use>
           </svg>
         </div>
         <h3 class="advantages-subtitle">Affordable price</h3>
@@ -208,7 +431,7 @@
       <li class="advantages-item">
         <div class="advantages-icon">
           <svg class="part-card-icon" width="32px" height="32px">
-            <use href="/vanilla-app-template/assets/symbol-defs-ab14a2f3.svg#icon-spoon"></use>
+            <use href="/comand-project/assets/symbol-defs-9c724f1e.svg#icon-spoon"></use>
           </svg>
         </div>
         <h3 class="advantages-subtitle">Own production</h3>
@@ -242,20 +465,20 @@
             <div class="unique-box-choco">
               <picture>
                 <source
-                  srcset="/vanilla-app-template/assets/chocolate-desktop-1x-e16ea73e.png 1x, /vanilla-app-template/assets/chocolate-desktop-2x-10b876ac.png 2x"
+                  srcset="/comand-project/assets/chocolate-desktop-1x-e16ea73e.png 1x, /comand-project/assets/chocolate-desktop-2x-10b876ac.png 2x"
                   media="(min-width: 1200px)"
                 />
                 <source
-                  srcset="/vanilla-app-template/assets/chocolate-1x-3b6303d9.png 1x, /vanilla-app-template/assets/chocolate-2x-2cc8ea18.png 2x"
+                  srcset="/comand-project/assets/chocolate-1x-3b6303d9.png 1x, /comand-project/assets/chocolate-2x-2cc8ea18.png 2x"
                   media="(min-width: 768px)"
                 />
                 <source
-                  srcset="/vanilla-app-template/assets/chocolate-1x-3b6303d9.png 1x, /vanilla-app-template/assets/chocolate-2x-2cc8ea18.png 2x"
+                  srcset="/comand-project/assets/chocolate-1x-3b6303d9.png 1x, /comand-project/assets/chocolate-2x-2cc8ea18.png 2x"
                   media="(max-width: 767px)"
                 />
 
                 <img
-                  src="/vanilla-app-template/assets/chocolate-1x-3b6303d9.png"
+                  src="/comand-project/assets/chocolate-1x-3b6303d9.png"
                   alt=""
                   class="unique-img"
                   width="224"
@@ -290,20 +513,20 @@
             <div class="unique-box-milk">
               <picture>
                 <source
-                  srcset="/vanilla-app-template/assets/milk-desktop-1x-7f95c264.png 1x, /vanilla-app-template/assets/milk-desktop-2x-34f80c30.png 2x"
+                  srcset="/comand-project/assets/milk-desktop-1x-7f95c264.png 1x, /comand-project/assets/milk-desktop-2x-34f80c30.png 2x"
                   media="(min-width: 1200px)"
                 />
                 <source
-                  srcset="/vanilla-app-template/assets/milk-1x-80ed62c0.png 1x, /vanilla-app-template/assets/milk-2x-36ae15b8.png 2x"
+                  srcset="/comand-project/assets/milk-1x-80ed62c0.png 1x, /comand-project/assets/milk-2x-36ae15b8.png 2x"
                   media="(min-width: 768px)"
                 />
                 <source
-                  srcset="/vanilla-app-template/assets/milk-1x-80ed62c0.png 1x, /vanilla-app-template/assets/milk-2x-36ae15b8.png 2x"
+                  srcset="/comand-project/assets/milk-1x-80ed62c0.png 1x, /comand-project/assets/milk-2x-36ae15b8.png 2x"
                   media="(max-width: 767px)"
                 />
 
                 <img
-                  src="/vanilla-app-template/assets/milk-1x-80ed62c0.png"
+                  src="/comand-project/assets/milk-1x-80ed62c0.png"
                   alt=""
                   class="unique-img"
                   width="224"
@@ -339,20 +562,20 @@
             <div class="unique-box-nuts">
               <picture>
                 <source
-                  srcset="/vanilla-app-template/assets/nuts-desktop-1x-cb79a089.png 1x, /vanilla-app-template/assets/nuts-desktop-2x-68384dea.png 2x"
+                  srcset="/comand-project/assets/nuts-desktop-1x-cb79a089.png 1x, /comand-project/assets/nuts-desktop-2x-68384dea.png 2x"
                   media="(min-width: 1200px)"
                 />
                 <source
-                  srcset="/vanilla-app-template/assets/nuts-1x-b3552e57.png 1x, /vanilla-app-template/assets/nuts-2x-649fc4e2.png 2x"
+                  srcset="/comand-project/assets/nuts-1x-b3552e57.png 1x, /comand-project/assets/nuts-2x-649fc4e2.png 2x"
                   media="(min-width: 768px)"
                 />
                 <source
-                  srcset="/vanilla-app-template/assets/nuts-1x-b3552e57.png 1x, /vanilla-app-template/assets/nuts-2x-649fc4e2.png 2x"
+                  srcset="/comand-project/assets/nuts-1x-b3552e57.png 1x, /comand-project/assets/nuts-2x-649fc4e2.png 2x"
                   media="(max-width: 767px)"
                 />
 
                 <img
-                  src="/vanilla-app-template/assets/nuts-1x-b3552e57.png"
+                  src="/comand-project/assets/nuts-1x-b3552e57.png"
                   alt=""
                   class="unique-img"
                   width="224"
@@ -388,20 +611,20 @@
             <div class="unique-box-milkchoco">
               <picture>
                 <source
-                  srcset="/vanilla-app-template/assets/coffe-desktop-1x-8d3a623b.png 1x, /vanilla-app-template/assets/coffe-desktop-1x-8d3a623b.png 2x"
+                  srcset="/comand-project/assets/coffe-desktop-1x-8d3a623b.png 1x, /comand-project/assets/coffe-desktop-1x-8d3a623b.png 2x"
                   media="(min-width: 1200px)"
                 />
                 <source
-                  srcset="/vanilla-app-template/assets/coffe-1x-01f2b2f3.png 1x, /vanilla-app-template/assets/coffe-2x-639adfdf.png 2x"
+                  srcset="/comand-project/assets/coffe-1x-01f2b2f3.png 1x, /comand-project/assets/coffe-2x-639adfdf.png 2x"
                   media="(min-width: 768px)"
                 />
                 <source
-                  srcset="/vanilla-app-template/assets/coffe-1x-01f2b2f3.png 1x, /vanilla-app-template/assets/coffe-2x-639adfdf.png 2x"
+                  srcset="/comand-project/assets/coffe-1x-01f2b2f3.png 1x, /comand-project/assets/coffe-2x-639adfdf.png 2x"
                   media="(max-width: 767px)"
                 />
 
                 <img
-                  src="/vanilla-app-template/assets/coffe-1x-01f2b2f3.png"
+                  src="/comand-project/assets/coffe-1x-01f2b2f3.png"
                   alt=""
                   class="unique-img"
                   width="224"
@@ -450,8 +673,8 @@
       <div class="work-photo list-markers work-blocks work-section-block">
         <img
           class="work-photo-coffe"
-          srcset="/vanilla-app-template/assets/cofee-1x-28187ad0.jpg 1x, /vanilla-app-template/assets/cofee-2x-2f981864.jpg 2x"
-          src="images/cofee-1X.jpg"
+          srcset="/comand-project/assets/cofee-1x-28187ad0.jpg 1x, /comand-project/assets/cofee-2x-2f981864.jpg 2x"
+          src="images/cofee-1x.jpg"
           alt=""
           width="335"
         />
@@ -459,7 +682,7 @@
           <svg class="work-icon" width="14" height="15">
             <use
               class="vector"
-              href="/vanilla-app-template/assets/symbol-defs-ab14a2f3.svg#icon-Vector-1"
+              href="/comand-project/assets/symbol-defs-9c724f1e.svg#icon-Vector-1"
             ></use>
           </svg>
         </a>
@@ -504,7 +727,466 @@
   </div>
 </section>
 
+      <section class="section section-fallback-our-produts current" id="our_products">
+  <div class="container container-fallback-our-produts">
+    <h2 class="title-fallback-our-produts">
+      Our <span class="decoration-for-first-word">PRODUCTS</span>
+    </h2>
+    <ul class="list-fallback-our-produts">
+      <li class="shape-fallback-our-produts chocolate-1">
+        <img
+          class="photo-fallback-our-produts"
+          srcset="/comand-project/assets/image1@2x-65f9984f.jpg 2x"
+          src="/comand-project/assets/image1-46f0df96.jpg"
+          alt="dark chocolate orange"
+          width="230"
+        />
+        <h3 class="name-fallback-our-produts">orange</h3>
+        <p class="text-fallback-our-produts">Dark chocolate</p>
+        <buttom class="btn-fallback-our-produts">45 UAH</buttom>
+      </li>
+      <li class="shape-fallback-our-produts chocolate-2">
+        <img
+          class="photo-fallback-our-produts"
+          srcset="/comand-project/assets/image2@2x-12e4f319.jpg 2x"
+          src="/comand-project/assets/image2-2880e283.jpg"
+          alt="milk chocolate apple and cramberry"
+          width="230"
+        />
+        <h3 class="name-fallback-our-produts">APPLE&CRANBERRY</h3>
+        <p class="text-fallback-our-produts">MIlk chocolate</p>
+        <buttom class="btn-fallback-our-produts">50 UAH</buttom>
+      </li>
+      <li class="shape-fallback-our-produts chocolate-3">
+        <img
+          class="photo-fallback-our-produts"
+          srcset="/comand-project/assets/image3@2x-afa1a6b1.jpg 2x"
+          src="/comand-project/assets/image3-e1fbeb3a.jpg"
+          alt="dark chocolate lime and sea salt"
+          width="230"
+        />
+        <h3 class="name-fallback-our-produts">lime&sea salt</h3>
+        <p class="text-fallback-our-produts">Dark chocolate</p>
+        <buttom class="btn-fallback-our-produts">66 UAH</buttom>
+      </li>
+      <li class="shape-fallback-our-produts chocolate-4">
+        <img
+          class="photo-fallback-our-produts"
+          srcset="/comand-project/assets/image4@2x-e4d6c84e.jpg 2x"
+          src="/comand-project/assets/image4-f69f64a1.jpg"
+          alt="dark chocolate pineapple"
+          width="230"
+        />
+        <h3 class="name-fallback-our-produts">pineapple</h3>
+        <p class="text-fallback-our-produts">Dark chocolate</p>
+        <buttom class="btn-fallback-our-produts">54 UAH</buttom>
+      </li>
+      <li class="shape-fallback-our-produts chocolate-5">
+        <img
+          class="photo-fallback-our-produts"
+          srcset="/comand-project/assets/image5@2x-d9f30550.jpg 2x"
+          src="/comand-project/assets/image5-4b7230cf.jpg"
+          alt="milk chocolate classic"
+          width="230"
+        />
+        <h3 class="name-fallback-our-produts">Classic</h3>
+        <p class="text-fallback-our-produts">Milk chocolate</p>
+        <buttom class="btn-fallback-our-produts">45 UAH</buttom>
+      </li>
+      <li class="shape-fallback-our-produts chocolate-6">
+        <img
+          class="photo-fallback-our-produts"
+          srcset="/comand-project/assets/image6@2x-441aedeb.jpg 2x"
+          src="/comand-project/assets/image6-fe8f2b5d.jpg"
+          alt="milk chocolate honey"
+          width="230"
+        />
+        <h3 class="name-fallback-our-produts">honey</h3>
+        <p class="text-fallback-our-produts">Milk chocolate</p>
+        <buttom class="btn-fallback-our-produts">50 UAH</buttom>
+      </li>
+      <li class="shape-fallback-our-produts chocolate-7">
+        <img
+          class="photo-fallback-our-produts"
+          srcset="/comand-project/assets/image7@2x-f5b60a3b.jpg 2x"
+          src="/comand-project/assets/image7-eeacdb01.jpg"
+          alt="dark chocolate roasted fruits"
+          width="230"
+        />
+        <h3 class="name-fallback-our-produts">Roasted fruits</h3>
+        <p class="text-fallback-our-produts">Dark chocolate</p>
+        <buttom class="btn-fallback-our-produts">66 UAH</buttom>
+      </li>
+      <li class="shape-fallback-our-produts chocolate-8">
+        <img
+          class="photo-fallback-our-produts"
+          srcset="/comand-project/assets/image8@2x-2ef36c0f.jpg 2x"
+          src="/comand-project/assets/image8-15c6cafb.jpg"
+          alt="white chocolate classic"
+          width="230"
+        />
+        <h3 class="name-fallback-our-produts">Classic</h3>
+        <p class="text-fallback-our-produts">White chocolate</p>
+        <buttom class="btn-fallback-our-produts">54 UAH</buttom>
+      </li>
+    </ul>
+    <ul class="list-circle-fallback-our-produts">
+      <li class="circle-fallback-our-produts-1"></li>
+      <li class="circle-fallback-our-produts"></li>
+      <li class="circle-fallback-our-produts"></li>
+      <li class="circle-fallback-our-produts"></li>
+      <li class="circle-fallback-our-produts"></li>
+      <li class="circle-fallback-our-produts"></li>
+      <li class="circle-fallback-our-produts"></li>
+    </ul>
+  </div>
+</section>
+
+      <section class="top-sellers" id="top_sellers">
+  <div class="container">
+    <h2 class="top-sellers-title">
+      <span class="section-title">Top </span>Sellers
+    </h2>
+    <ul class="section-list-img">
+      <li class="top-sallers-item">
+        <picture>
+          <source
+            srcset="/comand-project/assets/img01-236e6ee0.webp 1x, /comand-project/assets/img01@2x-d8d80ed2.webp 2x"
+            media="(min-width:1200px)"
+            type="image/webp"
+          />
+          <source
+            srcset="/comand-project/assets/img01-64558055.jpg 1x, /comand-project/assets/img01@2x-6c8ca9d1.jpg 2x"
+            media="(min-width:1200px)"
+          />
+          <source
+            srcset="/comand-project/assets/img01-7191b058.webp 1x, /comand-project/assets/img01@2x-e0d10193.webp 2x"
+            media="(min-width:768px)"
+            type="image/webp"
+          />
+          <source
+            srcset="/comand-project/assets/img01-cea6331b.jpg 1x, /comand-project/assets/img01@2x-42b3738a.jpg 2x"
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="/comand-project/assets/img01-53650a20.webp 1x, /comand-project/assets/img01@2x-3ff8f63d.webp 2x"
+            media="(max-width:767px)"
+            type="image/webp"
+          />
+
+          <source
+            srcset="/comand-project/assets/img01-57377149.jpg 1x, /comand-project/assets/img01@2x-e5b750c4.jpg 2x"
+            media="(max-width:767px)"
+          />
+          <img
+            class="photo-img1"
+            src="/comand-project/assets/img01-57377149.jpg"
+            alt="desktop photo"
+            height="464"
+          />
+        </picture>
+      </li>
+      <li class="top-sallers-item">
+        <p id="text" class="mobile-title">
+          Crazy enough chocolate originates from a bean just like the coffee
+          bean called Cacao. Cacao has been around for thousands of years and
+          was first discovered by the Native American tribe called the Mayans.
+        </p>
+      </li>
+      <li>
+        <picture class="mobile-picture-img2">
+          <source
+            srcset="/comand-project/assets/img02-eb66489e.webp 1x, /comand-project/assets/img02@2x-fc657b75.webp 2x"
+            media="(min-width:1200px)"
+            type="image/webp"
+          />
+          <source
+            srcset="/comand-project/assets/img02-14ad7de8.jpg 1x, /comand-project/assets/img02@2x-7fbec994.jpg 2x"
+            media="(min-width:1200px)"
+          />
+          <source
+            srcset="/comand-project/assets/img02-1da5aa3c.webp 1x, /comand-project/assets/img02@2x-9babd2df.webp 2x"
+            media="(min-width:768px)"
+            type="image/webp"
+          />
+          <source
+            srcset="/comand-project/assets/img02-76a93d42.jpg 1x, /comand-project/assets/img02@2x-0e99804b.jpg 2x"
+            media="(min-width:768px)"
+          />
+          <source
+            srcset="/comand-project/assets/img02-ae5d9842.webp 1x, /comand-project/assets/img02@2x-a0b4432f.webp 2x"
+            media="(max-width:767px)"
+            type="image/webp"
+          />
+          <source
+            srcset="/comand-project/assets/img02-edcad460.jpg 1x, /comand-project/assets/img02@2x-2560303f.jpg 2x"
+            media="(max-width:767px)"
+          />
+          <img
+            class="photo-img2"
+            src="/comand-project/assets/img02-edcad460.jpg"
+            alt="desktop photo"
+            height="464"
+          />
+        </picture>
+      </li>
+      <!-- </ul> -->
+      <!-- <ul class="section-list-img-tablet">
+      <li> -->
+      <!-- <picture>
+          <img
+            class="photo-img1"
+            src="./images/topsallers-tablet/img01.jpg"
+            alt="desktop photo"
+            width="344"
+          />
+        </picture> -->
+      <!-- </li>
+      <li>
+        <picture> -->
+      <!-- <img
+            class="photo-img2"
+            src="./images/topsallers-tablet/img02.jpg"
+            alt="tablet photo"
+            width="344"
+          /> -->
+      <!-- </picture>
+      </li>
+    </ul>
+    <ul class="section-list-img-desktop">
+      <li> -->
+      <!-- <picture>
+          <img
+            class="photo-img1"
+            src="./images/topsallers-desktop/img01.jpg"
+            alt="desktop photo"
+            width="368"
+          />
+        </picture> -->
+      <!-- </li> -->
+      <!-- <li>
+        <picture>
+          <img
+            class="photo-img2"
+            src="./images/topsallers-desktop/img02.jpg"
+            alt="tablet photo"
+            width="368"
+          />
+        </picture>
+      </li> -->
+      <li class="top-sallers-item">
+        <picture class="mobile-picture-img3">
+          <source
+            srcset="/comand-project/assets/img03-7d6a950e.webp 1x, /comand-project/assets/img03@2x-4f548a0c.webp 2x"
+            media="(min-width:1200px)"
+            type="image/webp"
+          />
+
+          <source
+            srcset="/comand-project/assets/img03-dcef1025.jpg 1x, /comand-project/assets/img03@2x-30c2e53e.jpg 2x"
+            media="(min-width:1200px)"
+          />
+
+          <img
+            class="photo-img3"
+            src="/comand-project/assets/img03-dcef1025.jpg"
+            alt="tablet photo"
+            height="464"
+          />
+        </picture>
+      </li>
+    </ul>
+    <div class="order-block">
+      <p class="desktop-tablet-title">
+        Crazy enough chocolate originates from a bean just like the coffee bean
+        called Cacao. Cacao has been around for thousands of years and was first
+        discovered by the Native American tribe called the Mayans.
+      </p>
+      <button class="btn-sale" type="button" buy-modal-open-sellers>
+        Buy now
+      </button>
+    </div>
+  </div>
+</section>
+
+      <section class="reviews" id="review">
+    <div class="container container-reviews">
+        <h2 class="reviews-header">chocolate<span> is loved</span></h2>
+        <div class="reviews-swiper">
+            <div class="reviews-swiper__wrap swiper-wrapper">
+                <div class="reviews-slid swiper-slide">
+                    <img width="80" height="80" srcset="/comand-project/assets/reviews-img-1-2x-e794062b.png 2x" src="/comand-project/assets/reviews-img-1-53fb6f4a.png" alt="" class="reviews-item-img">
+                    <div class="slid-text-wrap">
+                        <h3 class="reviews-item-title">Victoria Dobrzhanska</h3>
+                        <p class="reviw-text">
+                            I love this chocolate bar. Perfect combination of light crispy wafer, covered in a thin layer chocolate.
+                        </p>
+                    </div>
+                </div>
+                <div class="reviews-slid swiper-slide">
+                    <img width="80" height="80" srcset="/comand-project/assets/reviews-img-2-2x-444c4d29.png 2x" src="/comand-project/assets/reviews-img-2-fdf6d1be.png"
+                        alt="" class="reviews-item-img">
+                    <div class="slid-text-wrap">
+                        <h3 class="reviews-item-title">Nazar Babenko</h3>
+                        <p class="reviw-text">
+                            This chocolate confection is a delight! A delight! The wafer is light and crisp, the hazelnut cream is smooth, and the
+                            chocolate is good.
+                        </p>
+                    </div>
+                </div>
+                <div class="reviews-slid swiper-slide">
+                    <img width="80" height="80" srcset="/comand-project/assets/reviews-img-3-2x-ee7eb354.png 2x" src="/comand-project/assets/reviews-img-3-870e673c.png"
+                        alt="" class="reviews-item-img">
+                    <div class="slid-text-wrap">
+                        <h3 class="reviews-item-title">Olena Kampusch</h3>
+                        <p class="reviw-text">
+                            Chocolate is a family favourite treat. Love the delicious smooth chocolate and the creaminess inside. The wafer is soft
+                            but crunchy.
+                        </p>
+                    </div>
+                </div>
+                <div class="reviews-slid swiper-slide">
+                    <img width="80" height="80" srcset="/comand-project/assets/reviews-img-4-2x-3b118e41.jpg 2x" src="/comand-project/assets/reviews-img-4-06a8c393.jpg"
+                        alt="" class="reviews-item-img">
+                    <div class="slid-text-wrap">
+                        <h3 class="reviews-item-title">Natalia Sus</h3>
+                        <p class="reviw-text">
+                            The chocolate assortment was delicious. Both dark and milk chocolate pieces were smooth and just right on the sweetness
+                            level.
+                        </p>
+                    </div>
+                </div>
+                <div class="reviews-slid swiper-slide">
+                    <img width="80" height="80" srcset="/comand-project/assets/reviews-img-5-2x-58359f32.jpg 2x" src="/comand-project/assets/reviews-img-5-dcde2755.jpg"
+                        alt="" class="reviews-item-img">
+                    <div class="slid-text-wrap">
+                        <h3 class="reviews-item-title">Danilo Nottingham</h3>
+                        <p class="reviw-text">
+                            This is delicious. It so rich and flavorful you don’t need to use as many. I love topping an apple with almond butter
+                            and these chips for a snack.
+                        </p>
+                    </div>
+                </div>
+                <div class="reviews-slid swiper-slide">
+                    <img width="80" height="80" srcset="/comand-project/assets/reviews-img-6-2x-f2637f30.jpg 2x" src="/comand-project/assets/reviews-img-6-9e8e6113.jpg"
+                        alt="" class="reviews-item-img">
+                    <div class="slid-text-wrap">
+                        <h3 class="reviews-item-title">Irina Tydnyuk</h3>
+                        <p class="reviw-text">
+                            This is simply the best chocolate around, and I'm just thrilled to support a local company! Best local chocolate - world
+                            class 
+                        </p>
+                    </div>
+                </div>
+
+                
+            </div>
+            <div class="slider-pagination"></div>
+        </div>
+
+    <button class="reviews-btn" type="button" modal-open>
+        Leave a review
+    </button>
+
+    </div>
+  </div>
+</section>
+
+      <section class="subscriber">
+  <div class="container container-subscribe">
+    <h2 class="subscriber-title">exPLORE OUR NEW CHOCOLATE FIRST</h2>
+    <p class="subscriber-text">
+      From the velvety texture to the rich and complex flavor, our New Chocolate
+      is a true indulgence that will leave you craving more. Made with only the
+      finest ingredients and handcrafted with the utmost care, each piece is a
+      work of art that is sure to please.
+    </p>
+    <button type="button" class="subscriber-button btn" explorer-modal-open>Subscribe</button>
+  </div>
+</section>
     </main>
+    <footer class="section section-footer" id="footerу">
+  <div class="container container-footer">
+    <div class="top-part-footer">
+      <p class="title-footer">
+        <span class="decoration-for-first-word">Chocolate</span> a delicious
+        cure for a bad day
+      </p>
+      <div class="contacts-and-icons">
+        <ul class="contacts-footer">
+          <li class="title-contacts-footer">Contact us</li>
+          <li>
+            <a class="tel-footer link" href="tel:+380684439426"
+              >+380 (68) 443-94-26</a
+            >
+          </li>
+          <li>
+            <a class="email-footer link" href="mailto:simplychoc@gmail.com"
+              >simplychoc@gmail.com</a
+            >
+          </li>
+        </ul>
+        <ul class="links-footer">
+          <li class="link-instagram">
+            <a
+              class="icon-links-footer"
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
+              <svg class="icon-instagram" width="20" height="20">
+                <use href="/comand-project/assets/symbol-defs-12b69d81.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="link-twitter">
+            <a
+              class="icon-links-footer"
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
+              <svg class="icon-twitter" width="20" height="20">
+                <use href="/comand-project/assets/symbol-defs-12b69d81.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <nav class="navigation-footer">
+      <ul class="list-navigation-footer">
+        <li class="list-name-sections-footer list">
+          <a class="name-sections-site" href="#">Home</a>
+        </li>
+        <li class="list-name-sections-footer list">
+          <a class="name-sections-site" href="#how-its-work">How it’s made?</a>
+        </li>
+        <li class="list-name-sections-footer list">
+          <a class="name-sections-site" href="#our_products">Our products</a>
+        </li>
+        <li class="list-name-sections-footer list">
+          <a class="name-sections-site" href="#top_sellers">Top sellers</a>
+        </li>
+        <li class="list-name-sections-footer list">
+          <a class="name-sections-site" href="#review">Chocolate is loved</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   </body>
 </html>
