@@ -4,7 +4,7 @@
   | default @import url()
   |============================
 */
-/* @import 'swiper/css/bundle'; */
+@import 'swiper/css/bundle';
 @import url('./header.css');
 @import url('./how-its-made.css');
 @import url('./modal-rew.css');
